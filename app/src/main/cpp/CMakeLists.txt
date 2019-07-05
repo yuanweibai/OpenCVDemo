@@ -5,10 +5,11 @@
 
 cmake_minimum_required(VERSION 3.4.1)
 
-set(OpenCV_DIR ~/Documents/rango/OpenCVDemo/OpenCV-android-sdk/sdk/native/jni)
-#set(OpenCV_DIR ${PROJECT_SOURCE_DIR}/../OpenCV-android-sdk/sdk/native/jni)
+# ${PROJECT_SOURCE_DIR} 指的是cpp这个目录，如：/Users/yuanweibai/Documents/rango/OpenCVDemo/app/src/main/cpp
+set(OpenCV_DIR ${PROJECT_SOURCE_DIR}/../../../../OpenCV-android-sdk/sdk/native/jni)
+message(STATUS "${PROJECT_SOURCE_DIR} HHHHHHHHHHH") #在Build中打印出此信息
 find_package(OpenCV REQUIRED)
-include_directories(~/Documents/rango/OpenCVDemo/OpenCV-android-sdk/sdk/native/jni/include)
+include_directories(${OpenCV_INCLUDE_DIRS})
 
 
 # Creates and names a library, sets it as either STATIC
