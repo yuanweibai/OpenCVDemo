@@ -1,4 +1,3 @@
-#include "com_rango_tool_opencvdemo_MainActivity.h"
 #include <jni.h>
 #include <string>
 #include <opencv2/opencv.hpp>
