@@ -5,10 +5,10 @@
 
 cmake_minimum_required(VERSION 3.4.1)
 
-#set(OpenCV_DIR ~/Documents/rango/OpenCVDemo/OpenCV-android-sdk/sdk/native/jni)
-##set(OpenCV_DIR ${PROJECT_SOURCE_DIR}/../OpenCV-android-sdk/sdk/native/jni)
-#find_package(OpenCV REQUIRED)
-#include_directories(${OpenCV_INCLUDE_DIRS})
+set(OpenCV_DIR ~/Documents/rango/OpenCVDemo/OpenCV-android-sdk/sdk/native/jni)
+#set(OpenCV_DIR ${PROJECT_SOURCE_DIR}/../OpenCV-android-sdk/sdk/native/jni)
+find_package(OpenCV REQUIRED)
+include_directories(~/Documents/rango/OpenCVDemo/OpenCV-android-sdk/sdk/native/jni/include)
 
 
 # Creates and names a library, sets it as either STATIC
@@ -48,4 +48,5 @@ target_link_libraries( # Specifies the target library.
         # Links the target library to the log library
         # included in the NDK.
         ${log-lib}
-        ${OpenCV_LIBS})
+        ${OpenCV_LIBS}
+        jnigraphics)
